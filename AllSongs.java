@@ -15,9 +15,6 @@ public class AllSongs implements Search{
 		songslist.add(new Songs(8,"Just Look Up", "Ariana Grande", "Don't Look Up"));
 		
 	}
-	public ArrayList<Songs> getAllSongs() {
-		return this.songslist;
-	}
 	void displaySongs() {
 		System.out.format("%-25s%25s%25s","Song Name","Artist Name","Production Company"+"\n");
 		for (Songs songs : songslist) {
@@ -35,7 +32,7 @@ public class AllSongs implements Search{
 		return songname;
 	}
 	void displayAlbumSongs(String albumName) {
-		System.out.format("%-20s%-20s%10s"," ","Song Name","Artist Name","Production Company"+"\n");
+		System.out.format("%-20s%-20s%10s","Song Name","Artist Name","Production Company"+"\n");
 		for (Songs songs : songslist) {
 			if(albumName.equals(songs.Artist_name))
 			{			
